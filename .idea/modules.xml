@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/prezentacjiacode/prezentacjiacode.iml" filepath="$PROJECT_DIR$/prezentacjiacode/prezentacjiacode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/projekt-jpwp.iml" filepath="$PROJECT_DIR$/.idea/projekt-jpwp.iml" />
+    </modules>
+  </component>
+</project>
