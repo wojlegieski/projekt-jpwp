@@ -1,7 +1,12 @@
 public class stof {
     public static void main(String[] args)
     {
+        try {
         StackOverflow.test(5);
+        }
+        catch (StackOverflowError e) {
+            System.out.println(e);
+        }
     }
 }
 class StackOverflow {
