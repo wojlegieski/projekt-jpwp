@@ -64,17 +64,6 @@ public class FileParser {
         }
 
             return new Record(id, name, age, email);
-//        try {
-//            int id = Integer.parseInt(tokens[0]);
-//            String name = tokens[1];
-//            int age = Integer.parseInt(tokens[2]);
-//            String email = tokens[3];
-//            return new Record(id, name, age, email);
-//        }
-//        catch (Exception e){
-//            System.out.println(e.getMessage());
-//            return null;
-//        }
     }
     List<Record> parseFile(String path) throws FileProcessingException, InvalidFormatException{
         List<Record> list = new ArrayList<>();

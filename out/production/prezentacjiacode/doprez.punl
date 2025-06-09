@@ -1,0 +1,65 @@
+@startuml
+'--------------------------------------------------------------------------------
+' Ustawienia stylu dla lepszej czytelności
+'--------------------------------------------------------------------------------
+skinparam defaultTextAlignment center
+skinparam packageStyle rectangle
+skinparam classAttributeIconSize 0
+skinparam packageMargin 15
+skinparam linetype ortho
+
+' Układ poziomy
+left to right direction
+
+title Hierarchia wyjątków i błędów w Java
+
+'--------------------------------------------------------------------------------
+' Główna hierarchia Throwable z przykładami błędów (Errors)
+'--------------------------------------------------------------------------------
+package "java.lang" {
+    class Throwable
+    class Error
+    class Exception
+    class RuntimeException
+
+    ' Przykłady klas Error
+    class AssertionError
+    class VirtualMachineError
+    class OutOfMemoryError
+    class StackOverflowError
+}
+
+Throwable <|-- Error
+Throwable <|-- Exception
+Exception <|-- RuntimeException
+Error <|-- AssertionError
+Error <|-- VirtualMachineError
+VirtualMachineError <|-- OutOfMemoryError
+VirtualMachineError <|-- StackOverflowError
+
+'--------------------------------------------------------------------------------
+' Checked vs Unchecked Exceptions
+'--------------------------------------------------------------------------------
+skinparam package {
+    BackgroundColor LightSteelBlue
+    BorderColor SteelBlue
+}
+package "Checked Exceptions" {
+    class IOException
+    class ValidationException
+}
+
+skinparam package {
+    BackgroundColor LightCoral
+    BorderColor FireBrick
+}
+package "Unchecked Exceptions" {
+    class DatabaseException
+    class CustomRuntimeException
+}
+
+Exception <|-- IOException
+Exception <|-- ValidationException
+RuntimeException <|-- DatabaseException
+RuntimeException <|-- CustomRuntimeException
+@enduml
