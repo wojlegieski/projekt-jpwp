@@ -5,31 +5,22 @@ import java.util.List;
 
 public class Zadanie2{
     public static void processAndSum(String inputFile) throws IOException {
-        // 1) Odczytaj wszystkie linie z pliku
-        List<String> lines = Files.readAllLines(Paths.get(inputFile));
+        // TODO 1: Odczytaj wszystkie linie z pliku
+        List<String> lines = /* TODO */ null;
 
-        // 2) Zadeklaruj zmienną sum, inicjalizując ją na 0
-        int sum = 0;
-        String faultyLine = null;
+        // TODO 2: Zadeklaruj zmienną sum, inicjalizując ją na 0
+        // int sum = /* TODO */;
 
-        try {
-            // 3a) Sprawdź, czy lista jest pusta
-            if (lines.isEmpty()) {
-                throw new IllegalStateException("No data to process");
-            }
-            // 3b) Parsuj każdą linię i sumuj
-            for (String line : lines) {
-                faultyLine = line;
-                int value = Integer.parseInt(line.trim());
-                sum += value;
-            }
-        } catch (NumberFormatException e) {
-            // 4) Rzuć IllegalArgumentException z opisem błędnej linii
-            throw new IllegalArgumentException("Invalid number at line: " + faultyLine, e);
-        } finally {
-            // 5) Wyświetl dotychczasową sumę
-            System.out.println("Current sum: " + sum);
-        }
+        // TODO 3: Utwórz blok try { ... }
+        //   - Wewnątrz: jeśli lista linii jest pusta, rzuć IllegalStateException("No data to process")
+        //   - Iteruj po liniach, parsuj każdą do int i dodaj do zmiennej sum
+
+        // TODO 4: Dodaj blok catch dla NumberFormatException
+        //   - Wewnątrz: rzuć IllegalArgumentException z wiadomością zawierającą wartość błędnej linii
+
+        // TODO 5: Dodaj blok finally
+        //   - Wewnątrz: wyświetl dotychczasową sumę
+    }
     }
 
     public static void main(String[] args) {

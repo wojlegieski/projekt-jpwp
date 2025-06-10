@@ -9,19 +9,12 @@ public class Zadanie1 {
 
         // 1) Parsowanie do liczby całkowitej
         int number;
-        try {
-            number = Integer.parseInt(data.trim());
-        } catch (NumberFormatException e) {
-            throw new IllegalArgumentException("Invalid number: " + data);
-        }
+
 
         // 2) Sprawdzenie, czy liczba jest dodatnia
-        if (number <= 0) {
-            throw new IllegalArgumentException("Number must be positive");
-        }
+
 
         // 3) Dzielenie 100 przez liczbę (ArithmeticException przy zero)
-        int result = 100 / number;
 
         Files.writeString(Paths.get(outputFile), String.valueOf(result));
     }
