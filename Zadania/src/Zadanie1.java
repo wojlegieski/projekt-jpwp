@@ -5,10 +5,9 @@ import java.nio.file.Paths;
 
 public class Zadanie1 {
     public static void performOperation(String inputFile, String outputFile) throws IOException {
-        // 1) Odczyt całego tekstu z pliku
         String data = Files.readString(Paths.get(inputFile));
 
-        // 2) Parsowanie do liczby całkowitej
+        // 1) Parsowanie do liczby całkowitej
         int number;
         try {
             number = Integer.parseInt(data.trim());
@@ -16,15 +15,14 @@ public class Zadanie1 {
             throw new IllegalArgumentException("Invalid number: " + data);
         }
 
-        // 3) Sprawdzenie, czy liczba jest dodatnia
+        // 2) Sprawdzenie, czy liczba jest dodatnia
         if (number <= 0) {
             throw new IllegalArgumentException("Number must be positive");
         }
 
-        // 4) Dzielenie 100 przez liczbę (ArithmeticException przy zero)
+        // 3) Dzielenie 100 przez liczbę (ArithmeticException przy zero)
         int result = 100 / number;
 
-        // 5) Zapis wyniku do pliku wyjściowego
         Files.writeString(Paths.get(outputFile), String.valueOf(result));
     }
 
